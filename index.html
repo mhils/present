@@ -19,11 +19,15 @@
     <script src="js/impress.js"></script>
     <script src="js/presentation.js"></script>
 
-    <!-- Spoiler -->
+    <!-- ERCIS
+    <link href="css/ercis.css" rel="stylesheet">
+    <!-- -->
+
+    <!-- Spoiler
     <script src="js/spoiler.js"></script>
     <!-- -->
 
-    <!-- CodeMirror -->
+    <!-- CodeMirror
     <link href="bower_components/codemirror/lib/codemirror.css" rel="stylesheet"/>
     <script src="bower_components/codemirror/lib/codemirror.js"></script>
     <script src="bower_components/codemirror/mode/javascript/javascript.js"></script>
@@ -34,7 +38,7 @@
     <script src="bower_components/big.js/big.js"></script>
     <!-- -->
 
-    <!-- MathJax -->
+    <!-- MathJax
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
@@ -50,99 +54,15 @@
 <div class="presentation-progress progress">
     <div class="progress-bar" style="width: 30%;"></div>
 </div>
-<div id="impress" data-transition-duration="1000">
-
-    <section>
-        <h1 class="text-center">
-            <i class="fa fa-fw fa-html5 text-danger"></i>
-            <i class="fa fa-fw fa-slideshare text-warning"></i>
-            <i class="fa fa-fw fa-rocket text-success"></i>
-            <br><br>
-            <i>present</i>
-        </h1>
-        <br>
-        <h4 class="text-center text-muted">
-            an opinionated HTML5 presentation framework
-        </h4>
-    </section>
+<div id="impress" data-transition-duration="500">
 
 
-    <h1>Introduction</h1>
-    <section data-x="1200">
-        <h4>What is this framework about?</h4>
-        <ul>
-            <li>Based on a fork of impress.js. You should skim the <a href="https://github.com/bartaz/impress.js/blob/master/index.html">docs</a>.
-            <li><a href="http://getbootstrap.com/">Bootstrap</a> & <a href="https://fortawesome.github.io/Font-Awesome/">FontAwesome</a> included, <a href="http://www.latofonts.com/">Lato</a> as font.
-            <li>CSS to support "print to pdf"<br>
-                (always needs adjustments, but mostly works)
-            <li>Optional live JS editor using <a href="http://codemirror.net/">CodeMirror</a>
-            <li>Optional LaTeX support using <a href="http://www.mathjax.org/">MathJax</a>
-            <li>Some nice additions: progress bar, page numbers, skippable slides, substeps, spoilers, ...
-            <li class="text-success"><strong>Focus:</strong> No bloat, just some very light modules.
-        </ul>
-    </section>
-
-    
-    <section data-x="1200" data-y="800" disabled>
-        <h4>Disabled slide</h4>
-        Nothing to see here, move along.<br>
-        (you can click on it in the overview though)
-    </section>
-
-    <h1>Examples</h1>
-    <section data-x="2400">
-        <h3>Examples</h3>
-        <div class="row">
-            <div class="col-md-4">
-                <h4>Spoilers</h4>
-                <div id="jquery-selector" class="alert alert-danger text-center">You're spoiled!</div>
-                <button class="btn btn-primary btn-block" data-spoiler="#jquery-selector">Spoiler</button>
-
-            </div>
-            <div class="col-md-8">
-                <h4>Substeps</h4>
-                <ol>
-                <li class="substep"> Foo
-                <li class="substep"> Bar
-                <li class="substep"> Baz
-                </ol>
-                Substeps are really lightweight, i.e. no persistence in the URL. Usually, there's little reason to use them.
-        </div>
-    </section>
-
-    <div class="step custom-slide text-center hidden-print" data-x="2400" data-y="800">
-        <h1>Custom Slide.</h1>
-        (<code>.hidden-print</code> ftw)
-    </div>
-
-    <section data-x="2400" data-y="1600">
-        <h4>JS Editor</h4>
-        Out of the box, <code>println()</code> and <code>print()</code> are supported.<br><br>
-        <div class="code-editor">
-            <div class="row">
-                <div class="col-sm-7">
-                    <!-- needs explicit height and width -->
-                    <textarea style="width: 100%; height: 350px">for(var i=0; i<10; i++){
-  println(i);
-}</textarea>
-                </div>
-                <div class="col-sm-5">
-                    <pre class="output pre-scrollable"></pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section data-x="2400" data-y="2400">
-        <h4>LaTeX</h4>
-        $\LaTeX$ is supported using MathJax. <br>
-        Just surround your formula with <i class="fa fa-dollar"></i> or <i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>.
-
-        $$
-\mathcal{F}(f)(t)
-  = \frac{1}{\left(2\pi\right)^{\frac{n}{2}}}
-      \int_{\mathcal R^n} f(x)\,e^{-\mathrm{i} t \cdot x} \,\mathrm{d} x
-        $$
+    <section class="text-center">
+        <br><br>
+        <h3>An Empty Presentation</h3>
+        <h4 class="text-muted">Maximilian Hils</h4>
+        <br><br>
+        <a href="/examples.html" class="btn btn-success"><i class="fa fa-external-link"></i> Open presentation examples</a>
     </section>
 
 

@@ -1,0 +1,8 @@
+.slide.ercis {
+  background-image: url("ercis.png");
+  background-position: 720px 50px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVyY2lzLmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTTtFQUNGLHNCQUFzQixZQUF0QjtFQUNBLCtCQUFBO0VBQ0Esc0JBQUE7RUFDQSw0QkFBQSIsImZpbGUiOiJlcmNpcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2xpZGUuZXJjaXMge1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcImVyY2lzLnBuZ1wiKTtcbiAgICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiA3MjBweCA1MHB4O1xuICAgIGJhY2tncm91bmQtc2l6ZTogMjUwcHg7XG4gICAgYmFja2dyb3VuZC1yZXBlYXQ6IG5vLXJlcGVhdDtcbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

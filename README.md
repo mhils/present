@@ -4,13 +4,14 @@ HTML5 Presentation Framework based on [impress.js](https://github.com/bartaz/imp
 
 # Installation
 
-- `npm install`
-- `bower install`
-- optional, but highly recommended: [Chrome Live Reload Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+- Install git, make sure that you can invoke it from the command line.
+- Install Node.js
+- Open a command prompt the root directory of your presentation and enter `npm install`
+- Optional: Install the [Chrome Live Reload Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) and activate it after opening the presentation by clicking on the icon.
 
 # Usage
 
-- `gulp`
+- `npm start`
 
 # License
 

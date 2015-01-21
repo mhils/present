@@ -7,12 +7,11 @@ var plumber = require("gulp-plumber");
 var webserver = require('gulp-webserver');
 
 var conf = {
-    html: "index.html",
+    html: "*.html",
     js: "js/*",
     images: "images/*",
-    css: "css/style.less",
-    css_watch: "css/*.less",
-    css_vendor: "css/bootstrap.less",
+    css: "css/*.css",
+    less: "css/*.less",
     main: "index.html",
 };
 
@@ -23,22 +22,23 @@ var dont_break_on_errors = function () {
     });
 };
 
-var styles = function (files) {
-    return gulp.src(files)
+gulp.task("less", function(){
+    return gulp.src(conf.less)
         .pipe(dont_break_on_errors())
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest("css"))
-        .pipe(livereload());
-};
+        .pipe(gulp.dest("css"));
+});
 
-gulp.task("css-presentation", styles.bind(null, conf.css));
-gulp.task("css-vendor", styles.bind(null, conf.css_vendor));
-gulp.task("css", ["css-presentation", "css-vendor"]);
 
 gulp.task("html", function(){
     return gulp.src(conf.html)
+        .pipe(livereload());
+});
+
+gulp.task("css", function(){
+    return gulp.src(conf.css)
         .pipe(livereload());
 });
 
@@ -52,7 +52,7 @@ gulp.task("images", function(){
         .pipe(livereload());
 });
 
-gulp.task("build", ["css", "html", "js", "images"]);
+gulp.task("build", ["html", "less", "js", "images"]);
 
 gulp.task("serve", function () {
     gulp.src('.')
@@ -63,9 +63,9 @@ gulp.task("serve", function () {
 
 gulp.task("watch", function () {
     livereload.listen();
-    gulp.watch(conf.css_watch, ["css-presentation"]);
-    gulp.watch(conf.css_vendor, ["css-vendor"]);
     gulp.watch(conf.html, ["html"]);
+    gulp.watch(conf.less, ["less"]);
+    gulp.watch(conf.css, ["css"]);
     gulp.watch(conf.js, ["js"]);
     gulp.watch(conf.images, ["images"]);
 });
